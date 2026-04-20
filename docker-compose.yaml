@@ -1,0 +1,10 @@
+services:
+  grafana:
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    environment:
+      # Required for automatic service account provisioning (IAM permissions block in plugin.json)
+      GF_FEATURE_TOGGLES_ENABLE: externalServiceAccounts
+      # Set your Anthropic API key here for local development, or use the plugin config UI
+      # ANTHROPIC_API_KEY: sk-ant-...

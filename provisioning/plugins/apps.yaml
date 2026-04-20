@@ -1,0 +1,12 @@
+apiVersion: 1
+
+apps:
+  - type: grafana-claude-assistant
+    org_id: 1
+    disabled: false
+    jsonData:
+      # Claude model to use: claude-sonnet-4-6 | claude-opus-4-7 | claude-haiku-4-5-20251001
+      model: claude-sonnet-4-6
+    secureJsonData:
+      # Set via environment variable — never commit your API key directly
+      anthropicApiKey: ${ANTHROPIC_API_KEY}

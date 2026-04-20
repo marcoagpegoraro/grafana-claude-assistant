@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "Claude AI Assistant",
+  "id": "grafana-claude-assistant",
+  "backend": true,
+  "executable": "gpx_claude_ai_assistant",
+  "info": {
+    "keywords": ["ai", "claude", "anthropic", "assistant", "llm", "chat", "dashboards", "analytics"],
+    "description": "AI-powered assistant for Grafana using Claude (Anthropic). Query your data, create dashboards, and explore metrics with natural language — using your own API key, no vendor lock-in.",
+    "author": {
+      "name": "marcoagpegoraro",
+      "url": "https://github.com/marcoagpegoraro"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      { "name": "Source code", "url": "https://github.com/marcoagpegoraro/grafana-claude-assistant" },
+      { "name": "Report a bug", "url": "https://github.com/marcoagpegoraro/grafana-claude-assistant/issues" },
+      { "name": "Anthropic Console", "url": "https://console.anthropic.com" }
+    ],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2024-04-20"
+  },
+  "includes": [
+    {
+      "type": "page",
+      "name": "Chat",
+      "path": "/a/%PLUGIN_ID%/chat",
+      "addToNav": true,
+      "defaultNav": true,
+      "icon": "comment-alt"
+    },
+    {
+      "type": "page",
+      "icon": "cog",
+      "name": "Configuration",
+      "path": "/plugins/%PLUGIN_ID%",
+      "role": "Admin",
+      "addToNav": true
+    }
+  ],
+  "iam": {
+    "permissions": [
+      { "action": "dashboards:read", "scope": "dashboards:*" },
+      { "action": "dashboards:write", "scope": "dashboards:*" },
+      { "action": "datasources:read", "scope": "datasources:*" },
+      { "action": "datasources:query", "scope": "datasources:*" }
+    ]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.3.0",
+    "plugins": []
+  }
+}

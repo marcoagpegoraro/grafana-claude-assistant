@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <circle cx="40" cy="40" r="38" fill="#1a1a2e" stroke="#d97706" stroke-width="2"/>
+  <!-- Outer ring -->
+  <circle cx="40" cy="40" r="30" fill="none" stroke="#d97706" stroke-width="1.5" opacity="0.4"/>
+  <!-- Inner glow -->
+  <circle cx="40" cy="40" r="20" fill="#d97706" opacity="0.12"/>
+  <!-- AI "brain" paths -->
+  <path d="M28 34 Q28 26 36 26 Q40 26 42 29 Q44 26 48 26 Q56 26 56 34 Q56 42 48 44 L48 50 Q48 52 46 52 L34 52 Q32 52 32 50 L32 44 Q24 42 28 34 Z"
+        fill="none" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Neural nodes -->
+  <circle cx="40" cy="36" r="2.5" fill="#f59e0b"/>
+  <circle cx="33" cy="33" r="2" fill="#d97706"/>
+  <circle cx="47" cy="33" r="2" fill="#d97706"/>
+  <circle cx="35" cy="42" r="1.5" fill="#d97706" opacity="0.8"/>
+  <circle cx="45" cy="42" r="1.5" fill="#d97706" opacity="0.8"/>
+  <!-- Connections -->
+  <line x1="40" y1="36" x2="33" y2="33" stroke="#f59e0b" stroke-width="1" opacity="0.6"/>
+  <line x1="40" y1="36" x2="47" y2="33" stroke="#f59e0b" stroke-width="1" opacity="0.6"/>
+  <line x1="40" y1="36" x2="35" y2="42" stroke="#f59e0b" stroke-width="1" opacity="0.6"/>
+  <line x1="40" y1="36" x2="45" y2="42" stroke="#f59e0b" stroke-width="1" opacity="0.6"/>
+</svg>
